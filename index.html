@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meal Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Meal Finder</h1>
+    <p>Type a country, get its dishes.</p>
+
+    <div class="search" role="search">
+      <label for="country" class="sr-only">Country name</label>
+      <input id="country" type="text" list="country-list" placeholder="Try Canada, France or India" autocomplete="off" />
+      <datalist id="country-list"></datalist>
+      <button id="search-btn" type="button">Search meals</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="results" class="grid" aria-label="Meals"></section>
+  </main>
+
+  <dialog id="recipe">
+    <form method="dialog"><button class="close" aria-label="Close recipe">Close</button></form>
+    <div id="recipe-body"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
